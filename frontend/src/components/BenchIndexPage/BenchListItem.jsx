@@ -10,8 +10,10 @@ const BenchListItem = ({bench}) => {
     
     return (
         <>
-            <div onClick={handleClick}>{bench.title}</div>
-            <p>{bench.price}</p>
+            <div className="bench-list-item">
+                <p className="bench-link" onClick={handleClick}>{bench.title}</p>
+                <p>{bench.price}</p>
+            </div>
         </>
     )
 }

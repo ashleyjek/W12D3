@@ -1259,3 +1259,238 @@ Processing by Api::BenchesController#show as JSON
 Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1097)
 
 
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 15:46:18 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.4ms | Allocations: 179)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1085)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 15:46:49 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.1ms | Allocations: 860)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1275)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 15:56:28 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 15.4ms | Allocations: 3901)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 6.7ms | Allocations: 4313)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-07-19 15:58:40 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.5ms | Allocations: 179)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 1114)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 15:58:49 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.1ms | Allocations: 831)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1250)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:00:50 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 1.8ms | Allocations: 831)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1238)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:00:55 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 1.6ms | Allocations: 831)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1250)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:01:13 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 1.3ms | Allocations: 831)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1244)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:03:58 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 1.3ms | Allocations: 831)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1253)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:10:03 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 16.4ms | Allocations: 3760)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 9.5ms | Allocations: 4163)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 16:11:00 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 179)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1133)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:11:02 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.2ms | Allocations: 831)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1247)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-07-19 16:11:03 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.2ms | Allocations: 179)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1082)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:11:04 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 1.9ms | Allocations: 831)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1250)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:13:41 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 1.6ms | Allocations: 831)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1250)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:14:54 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.5ms | Allocations: 831)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1259)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-07-19 16:33:26 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.2ms | Allocations: 179)
+Completed 200 OK in 20ms (Views: 1.0ms | ActiveRecord: 8.1ms | Allocations: 4048)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:33:27 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (1.0ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 5.4ms | Allocations: 831)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 1238)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 16:33:30 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.6ms | Allocations: 179)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1082)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:33:32 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.6ms | Allocations: 831)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1232)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 16:33:36 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 179)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 1067)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 16:36:57 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.2ms | Allocations: 179)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1088)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 16:37:14 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.2ms | Allocations: 179)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1076)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 16:37:18 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.2ms | Allocations: 179)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1094)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 16:38:25 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 1.7ms | Allocations: 831)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1235)
+
+

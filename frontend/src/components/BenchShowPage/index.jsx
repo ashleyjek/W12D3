@@ -32,9 +32,9 @@ const BenchShowPage = () => {
     //     setLng(bench.lng);
     // }
     return (
-        <div>
+        <div className="show-page">
             <h1>{bench.title}</h1>
-            <h2>Details</h2>
+            <p>Details:</p>
             <p>{bench.description}</p>
             <ul>
                 <li>{bench.seating}</li>

@@ -23,12 +23,19 @@ function Navigation() {
   }
 
   return (
-    <ul>
-      <li>
-        <NavLink exact to="/">Home</NavLink>
-        {sessionLinks}
-      </li>
-    </ul>
+    <>
+    <h1 className="logo">Bench BnB</h1>
+    <div className="nav-bar">
+      <ul className="nav-links">
+        <li>
+          <NavLink exact to="/">Home</NavLink>
+        </li>
+        <li>
+          {sessionLinks}
+        </li>
+      </ul>
+    </div>
+    </>
   );
 }
 

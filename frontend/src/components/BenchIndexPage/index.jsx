@@ -14,8 +14,10 @@ const BenchIndexPage = () => {
 
     return (
         <>
-            <div>Bench Index Page</div>
-            <BenchList benches={benchesArr}/>
+            <div className="bench-index-header">Bench Index Page!</div>
+            <div className="bench-list-container">
+                <BenchList benches={benchesArr}/>
+            </div>
         </>
     )
 }
