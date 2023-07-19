@@ -5,6 +5,7 @@ class Api::BenchesController < ApplicationController
     end
 
     def create
+        debugger
         @bench = Bench.new(bench_params)
         if @bench.save
             render :show

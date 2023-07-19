@@ -400,3 +400,412 @@ Processing by Api::BenchesController#index as JSON
 Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 4.9ms | Allocations: 9003)
 
 
+Started GET "/api/benches/1" for ::1 at 2023-07-19 11:36:07 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"username"=>"hello", "password"=>"[FILTERED]", "id"=>"1", "bench"=>{}}
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.4ms | Allocations: 306)
+Completed 200 OK in 21ms (Views: 1.0ms | ActiveRecord: 7.3ms | Allocations: 7466)
+
+
+Started GET "/api/benches/2" for ::1 at 2023-07-19 11:36:10 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"username"=>"hello", "password"=>"[FILTERED]", "id"=>"2", "bench"=>{}}
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 8.5ms | Allocations: 5573)
+  Rendering api/errors/internal_server_error.json.jbuilder
+  Rendered api/errors/internal_server_error.json.jbuilder (Duration: 0.9ms | Allocations: 240)
+
+ActionView::Template::Error - undefined method `id' for nil:NilClass
+
+    attributes.each{ |key| _set_value key, _format_keys(object.public_send(key)) }
+                                                              ^^^^^^^^^^^^:
+	app/views/api/benches/show.json.jbuilder:2
+	app/views/api/benches/show.json.jbuilder:1
+	app/controllers/api/benches_controller.rb:19:in `show'
+
+Completed 500 Internal Server Error in 14ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 7701)
+
+
+Started GET "/api/benches/1" for ::1 at 2023-07-19 11:36:12 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"username"=>"hello", "password"=>"[FILTERED]", "id"=>"1", "bench"=>{}}
+  [1m[36mBench Load (0.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1306)
+
+
+Started GET "/api/benches" for ::1 at 2023-07-19 11:36:24 -0400
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"username"=>"hello", "password"=>"[FILTERED]", "bench"=>{}}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.0ms | Allocations: 780)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1282)
+
+
+Started POST "/api/benches" for ::1 at 2023-07-19 11:37:37 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 956)
+
+
+Started POST "/api/benches" for ::1 at 2023-07-19 11:38:42 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 879)
+
+
+Started POST "/api/benches" for ::1 at 2023-07-19 11:39:04 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 875)
+
+
+Started GET "/api/benches" for ::1 at 2023-07-19 11:54:28 -0400
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+  Rendering api/benches/index.json.jbuilder
+  Rendered api/benches/index.json.jbuilder (Duration: 0.5ms | Allocations: 140)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 1033)
+
+
+Started GET "/api/benches" for ::1 at 2023-07-19 11:54:38 -0400
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 16.1ms | Allocations: 4044)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 8.0ms | Allocations: 5009)
+
+
+Started POST "/api/benches" for ::1 at 2023-07-19 11:54:47 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 981)
+
+
+Started POST "/api/benches" for ::1 at 2023-07-19 11:59:12 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 5.9ms | Allocations: 1087)
+
+
+Started POST "/api/benches" for ::1 at 2023-07-19 12:01:41 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"bench"=>{"title"=>"\"bench2\"", "description"=>"\"description2\"", "price"=>"100", "lat"=>"40.74917052499831", "lng"=>"-73.98573262825552"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1017)
+
+
+Started GET "/api/session" for ::1 at 2023-07-19 12:03:08 -0400
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"bench"=>{"title"=>"\"bench2\"", "description"=>"\"description2\"", "price"=>"100", "lat"=>"40.74917052499831", "lng"=>"-73.98573262825552"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 3014)
+
+
+Started POST "/api/session" for ::1 at 2023-07-19 12:04:14 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 987)
+
+
+Started POST "/api/session" for ::1 at 2023-07-19 12:04:21 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 614)
+
+
+Started POST "/api/session" for ::1 at 2023-07-19 12:08:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 951)
+
+
+Started POST "/api/session" for ::1 at 2023-07-19 12:08:12 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1175)
+
+
+Started GET "/api/session" for ::1 at 2023-07-19 12:08:15 -0400
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 4869)
+
+
+Started POST "/api/session" for ::1 at 2023-07-19 12:08:31 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 940)
+
+
+Started GET "/api/session" for ::1 at 2023-07-19 12:10:28 -0400
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"session"=>{"email"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 995)
+
+
+Started POST "/api/benches" for ::1 at 2023-07-19 12:11:41 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/benches_controller.rb:10:in `create'
+  [1m[36mBench Create (0.9ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "bench2"], ["description", "description2"], ["price", 100], ["seating", 2], ["lat", 40.74917052499831], ["lng", -73.98573262825552], ["created_at", "2023-07-19 16:11:49.415583"], ["updated_at", "2023-07-19 16:11:49.415583"]]
+  ↳ app/controllers/api/benches_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/benches_controller.rb:10:in `create'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 1.2ms | Allocations: 551)
+Completed 200 OK in 7595ms (Views: 8.0ms | ActiveRecord: 7.9ms | Allocations: 85782)
+
+
+Started GET "/api/benches" for ::1 at 2023-07-19 12:11:58 -0400
+Processing by Api::BenchesController#index as JSON
+  Parameters: {"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552, "bench"=>{"title"=>"bench2", "description"=>"description2", "price"=>100, "seating"=>2, "lat"=>40.74917052499831, "lng"=>-73.98573262825552}}
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.9ms | Allocations: 1136)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1820)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 12:13:58 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.9ms | Allocations: 832)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.8ms | Allocations: 1247)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 12:14:43 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.5ms | Allocations: 833)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1244)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:46:22 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 18.1ms | Allocations: 6014)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 8.9ms | Allocations: 7620)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:48:03 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.6ms | Allocations: 831)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1313)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:49:02 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.8ms | Allocations: 831)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1235)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:50:55 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 17.8ms | Allocations: 831)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.4ms | Allocations: 1239)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:51:45 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.5ms | Allocations: 831)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1229)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:51:55 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.5ms | Allocations: 831)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 1244)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:52:10 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.5ms | Allocations: 831)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 1229)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:52:23 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.7ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.6ms | Allocations: 831)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 1223)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 13:57:24 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.3ms | Allocations: 831)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1232)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 14:02:24 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 4.0ms | Allocations: 831)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 1244)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 14:03:06 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.2ms | Allocations: 831)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1244)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 14:12:11 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 182)
+Completed 200 OK in 24ms (Views: 0.7ms | ActiveRecord: 9.9ms | Allocations: 5650)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-07-19 14:12:44 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.7ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 179)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 1080)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 14:15:51 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.2ms | Allocations: 831)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1259)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 14:17:28 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (1.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.4ms | Allocations: 179)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.2ms | Allocations: 1101)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 14:19:51 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 179)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 1083)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 14:23:12 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 3.7ms | Allocations: 831)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 1256)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 14:23:29 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.5ms | Allocations: 179)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.6ms | Allocations: 1094)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 14:25:52 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.9ms | Allocations: 179)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1089)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-07-19 14:26:19 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:1
+  Rendered api/benches/index.json.jbuilder (Duration: 2.6ms | Allocations: 831)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1244)
+
+
+Started GET "/api/benches/1" for 127.0.0.1 at 2023-07-19 14:26:27 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:19:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.4ms | Allocations: 179)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1073)
+
+
