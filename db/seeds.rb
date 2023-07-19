@@ -32,5 +32,14 @@ ApplicationRecord.transaction do
     }) 
   end
 
+  puts "Creating benches..."
+  Bench.create!(
+    title: "new bench",
+    description: "description",
+    price: 50,
+    lat: 40.73630307878687, 
+    lng: -73.99379640439483
+  )
+
   puts "Done!"
 end
